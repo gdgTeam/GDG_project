@@ -15,12 +15,12 @@ public class MovementKeys : MonoBehaviour {
     {
         Vector3 movementVector = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.W))
+        /*if (Input.GetKey(KeyCode.W))
             movementVector += transform.forward;
-
+        
         if (Input.GetKey(KeyCode.S))
             movementVector += -transform.forward;
-
+        */
         if (Input.GetKey(KeyCode.A))
             movementVector += -transform.right;
 
