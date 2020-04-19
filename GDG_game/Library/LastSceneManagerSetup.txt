@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: Assets/Scenes/Animazioni/Animazioni.unity
+=======
 - path: Assets/Scenes/SampleScene.unity
+>>>>>>> Prove_2.5d
   isLoaded: 1
   isActive: 1
   isSubScene: 0
