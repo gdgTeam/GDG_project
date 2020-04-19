@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-0.2749888300895691,"y":-0.42516112327575686,"z":-0.5392090678215027},"rotation":{"x":-0.18901444971561433,"y":0.45168420672416689,"z":-0.09854644536972046,"w":-0.8663400411605835},"size":29.059707641601564,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":-1.0000004768371583,"y":-16.795734405517579,"z":37.91139602661133},"rotation":{"x":-0.06026669591665268,"y":-0.01437610574066639,"z":0.000868190370965749,"w":-0.9980793595314026},"size":5.034106731414795,"orthographic":false}
+>>>>>>> Prove_2.5d
