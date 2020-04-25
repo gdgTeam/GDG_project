@@ -1,5 +1,13 @@
 sceneSetups:
 - path: Assets/ScenaDiProva/Scena/SampleScene.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Animazioni/Animazioni.unity
   isLoaded: 1
   isActive: 1
+  isSubScene: 0
+- path: Assets/CoseUtili/_Animations/Scenes/00_AnimController.unity
+  isLoaded: 0
+  isActive: 0
   isSubScene: 0

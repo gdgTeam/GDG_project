@@ -18,11 +18,12 @@ public class MoveCharacter : MonoBehaviour
         float move = Input.GetAxis("Horizontal");
         if (move != 0)
         {
-            s += 0.01f;
+            if(s < 1)
+             s += 0.025f;
         }
         else
         {
-            if (s > 0) s -= 0.05f;
+            if (s > 0) s -= 0.04f;
             else s = 0;
         }
         anim.SetFloat("Speed", s);
