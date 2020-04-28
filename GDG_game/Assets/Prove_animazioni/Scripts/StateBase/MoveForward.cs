@@ -9,33 +9,43 @@ namespace roundbeargames_tutorial
     {
         public float Speed;
 
-        public override void UpdateAbility(CharacterState characterState, Animator animator)
+        public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CharacterControl c = characterState.GetCharacterControl(animator);
 
-            if (VirtualInputManager.Instance.MoveRight && VirtualInputManager.Instance.MoveLeft)
+        }
+
+        public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
+        {
+            CharacterControl control = characterState.GetCharacterControl(animator);
+
+            if (control.MoveRight && control.MoveLeft)
             {
                 animator.SetBool(TransitionParameter.Move.ToString(), false);
                 return;
             }
 
-            if (!VirtualInputManager.Instance.MoveRight && !VirtualInputManager.Instance.MoveLeft)
+            if (!control.MoveRight && !control.MoveLeft)
             {
                 animator.SetBool(TransitionParameter.Move.ToString(), false);
                 return;
             }
 
-            if (VirtualInputManager.Instance.MoveRight)
+            if (control.MoveRight)
             {
-                c.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
-                c.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                control.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+                control.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }
 
             if (VirtualInputManager.Instance.MoveLeft)
             {
-                c.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
-                c.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+                control.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+                control.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             }
+        }
+
+        public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
+        {
+
         }
     }
 }

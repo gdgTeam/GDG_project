@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad790399241924c12b6d432a309fae70, type: 3}
-  m_Name: Idle
+  m_Script: {fileID: 11500000, guid: af52fba622919c3438a17a58d15c0348, type: 3}
+  m_Name: Player_Jump_Normal_Landing
   m_EditorClassIdentifier: 
