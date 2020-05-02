@@ -40,19 +40,19 @@ namespace roundbeargames_tutorial
             //controllo che non ci sia niente davanti il character, se rilevo qualcosa non mi muovo più 
             if (control.MoveRight)
             {
+                control.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 if (!CheckFront(control))
                 {
                     control.transform.Translate(Vector3.forward * Speed * SpeedGraph.Evaluate(stateInfo.normalizedTime) * Time.deltaTime);
-                    control.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 }
             }
 
             if (control.MoveLeft)
             {
+                control.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
                 if (!CheckFront(control))
                 {
                     control.transform.Translate(Vector3.forward * Speed * SpeedGraph.Evaluate(stateInfo.normalizedTime) * Time.deltaTime);
-                    control.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
                 }
             }
         }
