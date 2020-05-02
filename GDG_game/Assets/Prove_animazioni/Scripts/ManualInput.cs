@@ -33,27 +33,13 @@ namespace roundbeargames_tutorial
                 characterControl.MoveLeft = false;
             }
 
-            if (VirtualInputManager.Instance.Jump && (!VirtualInputManager.Instance.MoveLeft || !VirtualInputManager.Instance.MoveRight))
+            if (VirtualInputManager.Instance.Jump)
             {
                 characterControl.Jump = true;
             }
             else
             {
                 characterControl.Jump = false;
-            }
-
-            if (VirtualInputManager.Instance.MoveLeft && VirtualInputManager.Instance.Jump)
-            {
-                characterControl.JumpRun = true;
-            }
-            else if(VirtualInputManager.Instance.MoveRight && VirtualInputManager.Instance.Jump)
-            {
-                characterControl.JumpRun = true;
-            }
-            else
-            {
-                characterControl.JumpRun = false;
-
             }
         }
     }

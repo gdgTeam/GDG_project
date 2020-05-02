@@ -9,11 +9,9 @@ namespace roundbeargames_tutorial
     {
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-
+            animator.SetBool(TransitionParameter.Jump.ToString(), false); //per evitare di saltare due volte se premo spazio mentre sono nello stato di landing
         }
 
-        //mentre sono nello stato di Idle faccio i controlli e se soddisfano le condizioni setto i vari parametri
-        // per far partire la transizione verso il nuovo stato
         public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
             CharacterControl control = characterState.GetCharacterControl(animator);

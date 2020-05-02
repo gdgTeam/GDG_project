@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace roundbeargames_tutorial
 {
-    //classe ereditata da tutti gli stati in cui sono definiti i metodi di cui fare l'override
     public abstract class StateData : ScriptableObject
     {
         public abstract void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo);

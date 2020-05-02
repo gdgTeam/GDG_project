@@ -10,6 +10,7 @@ namespace roundbeargames_tutorial
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
             animator.SetBool(TransitionParameter.Jump.ToString(), false);
+            animator.SetBool(TransitionParameter.Move.ToString(), false); //quando atterro sto fermo fino a quando non ripremo il tasto per andare avanti
         }
 
         public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
