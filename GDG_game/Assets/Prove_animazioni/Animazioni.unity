@@ -159,7 +159,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &252881320
 MonoBehaviour:
@@ -216,7 +216,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: e9f7a3cb2e4877447a6225e0b93215c6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e9f7a3cb2e4877447a6225e0b93215c6,
         type: 3}

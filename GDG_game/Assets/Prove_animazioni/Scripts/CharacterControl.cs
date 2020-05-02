@@ -46,6 +46,11 @@ namespace roundbeargames_tutorial
             GameObject bottomFront = CreateEdgeSphere(new Vector3(0f, bottom, front));
             GameObject bottomBack = CreateEdgeSphere(new Vector3(0f, bottom, back));
 
+            Debug.Log(bottom);
+            Debug.Log(top);
+            Debug.Log(front);
+            Debug.Log(back);
+
             bottomFront.transform.parent = this.transform;
             bottomBack.transform.parent = this.transform;
 
