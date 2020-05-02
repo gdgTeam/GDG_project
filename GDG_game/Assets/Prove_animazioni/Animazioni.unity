@@ -142,6 +142,7 @@ MonoBehaviour:
   MoveRight: 0
   MoveLeft: 0
   Jump: 0
+  JumpRun: 0
   ColliderEdgePrefab: {fileID: 8741312830442226265, guid: 32ce171f92354824b9ec0a2b62696301,
     type: 3}
   BottomSpheres: []
@@ -216,7 +217,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: e9f7a3cb2e4877447a6225e0b93215c6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e9f7a3cb2e4877447a6225e0b93215c6,
         type: 3}

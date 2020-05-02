@@ -4,12 +4,14 @@ using UnityEngine;
 
 namespace roundbeargames_tutorial
 {
+    //ogni volta che inseriamo un nuovo parametro per le transizioni va inserito anche qui
     public enum TransitionParameter
     {
         Move,
         Jump,
         ForceTransition,
         Grounded,
+        JumpRun,
     }
 
     public class CharacterControl : MonoBehaviour
@@ -18,6 +20,7 @@ namespace roundbeargames_tutorial
         public bool MoveRight;
         public bool MoveLeft;
         public bool Jump;
+        public bool JumpRun;
         public GameObject ColliderEdgePrefab;
         public List<GameObject> BottomSpheres = new List<GameObject>();
 
@@ -36,6 +39,7 @@ namespace roundbeargames_tutorial
 
         private void Awake()
         {
+            //prendo le coordinate del box collider in modo da posizionare gli edge collider al fondo del box
             BoxCollider box = GetComponent<BoxCollider>();
 
             float bottom = box.bounds.center.y - box.bounds.extents.y;

@@ -41,6 +41,10 @@ namespace roundbeargames_tutorial
                 control.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
                 control.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             }
+            if (control.JumpRun)
+            {
+                animator.SetBool(TransitionParameter.JumpRun.ToString(), true);
+            }
         }
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)

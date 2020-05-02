@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 26d6bd6dc68a748b3a31a454c778d9b7
+guid: 19142467c092b43d7a2362fb8b869d27
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: jump_normal_landing
+    second: Jump_run_third
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: jump_normal_landing
+      name: Jump_run_third
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 45
+      lastFrame: 13
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -48,7 +48,7 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
@@ -99,15 +99,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - ad745fefece4df14e8e7d71fbbadc8db
-  - a1a7999358779284794db738aba8d7f6
-  - 188452aaf4cf0914da5421d92343ee95
-  - 161fbbbb3f41ba143857cd540cd37b6b
-  - d074caebe9e276e4985b950a91888d95
-  - 8c8598237689eb9489a0b0fca6ec9562
-  - e9f7a3cb2e4877447a6225e0b93215c6
-  - 5ca75f5bcd8f71847b2bed64f649f834
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 1
   humanDescription:
