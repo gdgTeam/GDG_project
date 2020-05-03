@@ -7,6 +7,9 @@ namespace roundbeargames_tutorial
     [CreateAssetMenu(fileName = "New State", menuName = "Roundbeargames/AbilityData/Idle")]
     public class Idle : StateData
     {
+
+        public float BlockDistance;
+
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
             animator.SetBool(TransitionParameter.Jump.ToString(), false); //per evitare di saltare due volte se premo spazio mentre sono nello stato di landing
@@ -30,11 +33,31 @@ namespace roundbeargames_tutorial
             {
                 animator.SetBool(TransitionParameter.Move.ToString(), true);
             }
+
+            if (control.Pushing && CheckFront(control))
+            {
+                animator.SetBool(TransitionParameter.Push.ToString(), true);
+            }
         }
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
 
+        }
+
+        bool CheckFront(CharacterControl control)
+        {
+            foreach (GameObject o in control.FrontSpheres)
+            {
+                Debug.DrawRay(o.transform.position, control.transform.forward * 0.3f, Color.yellow);
+                RaycastHit hit;
+                if (Physics.Raycast(o.transform.position, control.transform.forward, out hit, BlockDistance))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }
