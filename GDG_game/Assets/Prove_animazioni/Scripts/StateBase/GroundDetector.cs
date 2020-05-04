@@ -25,10 +25,14 @@ namespace roundbeargames_tutorial
                 if (IsGrounded(control))
                 {
                     animator.SetBool(TransitionParameter.Grounded.ToString(), true);
+                    //control.RIGID_BODY.constraints = RigidbodyConstraints.FreezePositionY;
+                    control.RIGID_BODY.constraints = RigidbodyConstraints.FreezeRotation;
+
+
                 }
                 else
                 {
-                    animator.SetBool(TransitionParameter.Grounded.ToString(), false);
+                   // animator.SetBool(TransitionParameter.Grounded.ToString(), false);
                 }
             }
         }
@@ -40,6 +44,7 @@ namespace roundbeargames_tutorial
 
         bool IsGrounded(CharacterControl control)
         {
+
             if (control.RIGID_BODY.velocity.y > -0.001f && control.RIGID_BODY.velocity.y <= 0f)
             {
                 return true;
@@ -53,6 +58,7 @@ namespace roundbeargames_tutorial
                     RaycastHit hit;
                     if (Physics.Raycast(o.transform.position, -Vector3.up, out hit, Distance))
                     {
+                        Debug.Log(o);
                         return true;
                     }
                 }

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aa11cccdaf53db4eb2a83396f51ed01, type: 3}
   m_Name: Player_Jump_Normal_ForceTransition
   m_EditorClassIdentifier: 
-  TransitionTiming: 0
+  TransitionTiming: 0.01
