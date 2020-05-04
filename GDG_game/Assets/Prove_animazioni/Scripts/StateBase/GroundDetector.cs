@@ -32,7 +32,7 @@ namespace roundbeargames_tutorial
                 }
                 else
                 {
-                   // animator.SetBool(TransitionParameter.Grounded.ToString(), false);
+                    animator.SetBool(TransitionParameter.Grounded.ToString(), false);
                 }
             }
         }
@@ -58,7 +58,7 @@ namespace roundbeargames_tutorial
                     RaycastHit hit;
                     if (Physics.Raycast(o.transform.position, -Vector3.up, out hit, Distance))
                     {
-                        Debug.Log(o);
+
                         return true;
                     }
                 }
