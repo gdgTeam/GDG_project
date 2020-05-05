@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83d7a79a6d4e8684088d3fb6f4dfdb9a, type: 3}
   m_Name: General_GroundDetector
   m_EditorClassIdentifier: 
-  CheckTime: 0.2
-  Distance: 0.05
+  CheckTime: 0.1
+  Distance: 3
