@@ -34,7 +34,7 @@ namespace roundbeargames_tutorial
                 animator.SetBool(TransitionParameter.Move.ToString(), true);
             }
 
-            if (control.Pushing && CheckFront(control))
+            if (control.Pushing && CheckFrontPush(control, animator))
             {
                 animator.SetBool(TransitionParameter.Push.ToString(), true);
             }
@@ -45,14 +45,15 @@ namespace roundbeargames_tutorial
 
         }
 
-        bool CheckFront(CharacterControl control)
+        bool CheckFrontPush(CharacterControl control, Animator animator)
         {
             foreach (GameObject o in control.FrontSpheres)
             {
                 Debug.DrawRay(o.transform.position, control.transform.forward * 0.3f, Color.yellow);
                 RaycastHit hit;
-                if (Physics.Raycast(o.transform.position, control.transform.forward, out hit, BlockDistance))
+                if (Physics.Raycast(o.transform.position, control.transform.forward, out hit, BlockDistance) && hit.collider.gameObject.tag == "Pushable")
                 {
+                    hit.collider.gameObject.transform.SetParent(animator.gameObject.transform);
                     return true;
                 }
             }

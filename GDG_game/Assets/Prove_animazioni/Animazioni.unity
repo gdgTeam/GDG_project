@@ -372,7 +372,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.76070905, y: 1.7313461, z: 0.566349}
+  m_Size: {x: 0.76070905, y: 1.7313461, z: 0.56}
   m_Center: {x: -0.005201936, y: 0.85206294, z: -0.021640778}
 --- !u!4 &252881322 stripped
 Transform:
@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 1543769100}
   m_Layer: 0
   m_Name: Cube (7)
-  m_TagString: Untagged
+  m_TagString: Pushable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1173,7 +1173,7 @@ GameObject:
   - component: {fileID: 1646290407}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
