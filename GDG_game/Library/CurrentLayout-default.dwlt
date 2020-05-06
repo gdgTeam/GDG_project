@@ -113,10 +113,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 817, y: 494}
-  m_MaxSize: {x: 22012, y: 14044}
+  m_MinSize: {x: 813, y: 494}
+  m_MaxSize: {x: 22008, y: 14044}
   vertical: 0
-  controlID: 166
+  controlID: 164
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 494}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 113
+  controlID: 133
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,8 +291,8 @@ MonoBehaviour:
     y: 0
     width: 413
     height: 731
-  m_MinSize: {x: 279, y: 72}
-  m_MaxSize: {x: 4004, y: 4022}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -441,9 +441,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -8.762202, y: 2.435101, z: -4.7545996}
+    m_Target: {x: -15.256852, y: -0.7186337, z: -11.545573}
     speed: 2
-    m_Value: {x: -8.762202, y: 2.435101, z: -4.7545996}
+    m_Value: {x: -15.256852, y: -0.7186337, z: -11.545573}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -472,13 +472,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.25986475, y: -0.43978712, z: 0.13459927, w: 0.84908986}
+    m_Target: {x: 0.122659236, y: -0.61555076, z: 0.09775888, w: 0.77234024}
     speed: 2
-    m_Value: {x: 0.25986308, y: -0.4397843, z: 0.1345984, w: 0.8490844}
+    m_Value: {x: 0.12265836, y: -0.61554635, z: 0.09775818, w: 0.7723347}
   m_Size:
-    m_Target: 37.762783
+    m_Target: 22.513763
     speed: 2
-    m_Value: 37.762783
+    m_Value: 22.513763
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -539,14 +539,14 @@ MonoBehaviour:
     - {fileID: 539256017581585071, guid: 79c00d29ed23a2242b13ffe658de796f, type: 2}
     - {fileID: 6230199821793017327, guid: a328bec138912e84e84ad23e768271d3, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.44034353
+    - e00: 0.420751
       e01: 0
       e02: 0
-      e03: 108.952644
+      e03: 99.29918
       e10: 0
-      e11: 0.44034353
+      e11: 0.420751
       e12: 0
-      e13: 57.68918
+      e13: 52.607803
       e20: 0
       e21: 0
       e22: 1
@@ -665,10 +665,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 47}
-      m_SelectedIDs: a4bbffff
+      scrollPos: {x: 0, y: 31}
+      m_SelectedIDs: 442f0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 68fbffffb0350000
+      m_ExpandedIDs: 68fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -736,14 +736,14 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: E:\MAGISTRALE\2 anno\GDG_GitHub\GDG_project\GDG_game
+  m_LastProjectPath: "D:\\Universit\xE0\\Game Design e Gamification\\Game Design\\Git\\GDG_project\\GDG_game"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 8c5a0000
     m_LastClickedID: 23180
-    m_ExpandedIDs: 00000000022f00003a2f00004c2f0000a02f0000ba2f0000d82f0000ee2f000002300000103000004c300000623100002032000036330000bc3300002c340000383400006e3400000c3800000e38000010380000
+    m_ExpandedIDs: 00000000022f00003a2f00004c2f0000a02f0000ba2f0000d82f0000ee2f000002300000103000004c300000623100002032000036330000bc3300002c340000383400006e340000143800001638000018380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -768,24 +768,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 589.99817}
+    scrollPos: {x: 0, y: 466}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000022f00003a2f00004c2f0000a02f0000ba2f0000d82f0000ee2f000002300000103000004c300000623100002032000036330000bc3300002c340000383400006e3400000c3800000e38000010380000
+    m_ExpandedIDs: ffffffff00000000022f00003a2f00004c2f0000a02f0000ba2f0000d82f000002300000103000004c3000002032000036330000bc3300002c340000383400006e340000143800001638000018380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Jump
+      m_OriginalName: Jump
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 10580
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 

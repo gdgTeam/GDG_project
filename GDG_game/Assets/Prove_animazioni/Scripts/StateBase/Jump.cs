@@ -10,12 +10,19 @@ namespace roundbeargames_tutorial
         public float JumpForce;
         public AnimationCurve Gravity;
         //public AnimationCurve Pull;
+        private BoxCollider box;
+        private float bottom;
+        private float zeta;
 
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
             characterState.GetCharacterControl(animator).RIGID_BODY.AddForce(Vector3.up * JumpForce);
            // characterState.GetCharacterControl(animator).RIGID_BODY.constraints = RigidbodyConstraints.FreezeRotation;
             animator.SetBool(TransitionParameter.Grounded.ToString(), false);
+            box = animator.GetComponentInParent<BoxCollider>();
+            bottom = box.size.y;
+            zeta = box.size.z;
+            box.size = new Vector3(box.size.x, 0.5f, 0.3f);
         }
 
         public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
@@ -27,7 +34,7 @@ namespace roundbeargames_tutorial
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-
+            box.size = new Vector3(box.size.x, bottom, zeta);
         }
     }
 }
