@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Idle
   m_EditorClassIdentifier: 
   BlockDistance: 0.5
+  PickDistance: 0.2
+  hand: {fileID: 0}

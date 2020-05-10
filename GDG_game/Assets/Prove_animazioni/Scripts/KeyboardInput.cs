@@ -43,6 +43,15 @@ namespace roundbeargames_tutorial
             {
                 VirtualInputManager.Instance.Pushing = false;
             }
+
+            if (Input.GetKey(KeyCode.Q))
+            {
+                VirtualInputManager.Instance.Picking = true;
+            }
+            else
+            {
+                VirtualInputManager.Instance.Picking = false;
+            }
         }
     }
 }

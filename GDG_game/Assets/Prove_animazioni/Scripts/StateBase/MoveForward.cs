@@ -68,6 +68,17 @@ namespace roundbeargames_tutorial
             {
                 Debug.DrawRay(o.transform.position, control.transform.forward * 0.3f, Color.yellow);
                 RaycastHit hit;
+                if (Physics.Raycast(o.transform.position, control.transform.forward, out hit, 1f))
+                {
+                    if (hit.collider.gameObject.tag == "Pickable")
+                    {
+                        BlockDistance = 0.2f;
+                    }
+                    else
+                    {
+                        BlockDistance = 0.5f;
+                    }
+                }
                 if (Physics.Raycast(o.transform.position, control.transform.forward, out hit, BlockDistance))
                 {
                     return true;
