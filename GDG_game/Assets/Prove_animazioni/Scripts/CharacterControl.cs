@@ -10,7 +10,9 @@ namespace roundbeargames_tutorial
         Jump,
         ForceTransition,
         Grounded,
-        Push
+        Push,
+        TransitionIndex,
+
     }
 
     public class CharacterControl : MonoBehaviour
@@ -23,6 +25,9 @@ namespace roundbeargames_tutorial
         public GameObject ColliderEdgePrefab;
         public List<GameObject> BottomSpheres = new List<GameObject>();
         public List<GameObject> FrontSpheres = new List<GameObject>();
+        public bool MoveUp;
+        public bool MoveDown;
+        
 
         public float GravityMultiplier;
         public float PullMultiplier;
