@@ -38,7 +38,7 @@ namespace roundbeargames_tutorial
             {
                 if (rigid == null)
                 {
-                    rigid = GetComponent<Rigidbody>();
+                    rigid = this.gameObject.transform.GetComponent<Rigidbody>();
                 }
                 return rigid;
             }

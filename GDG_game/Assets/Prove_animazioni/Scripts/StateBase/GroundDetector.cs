@@ -26,7 +26,7 @@ namespace roundbeargames_tutorial
                 {
                     animator.SetBool(TransitionParameter.Grounded.ToString(), true);
                     //control.RIGID_BODY.constraints = RigidbodyConstraints.FreezePositionY;
-                    control.RIGID_BODY.constraints = RigidbodyConstraints.FreezeRotation;
+                    control.RIGID_BODY.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX;
 
 
                 }

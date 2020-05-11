@@ -11,7 +11,7 @@ public class RigidBodyConstraints : MonoBehaviour
     void Start()
     {
         rigidBody = this.gameObject.GetComponent<Rigidbody>();
-        rigidBody.constraints = RigidbodyConstraints.FreezePositionX;
+        rigidBody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
        
         //rigidbodyConstraints.FreezePositionX = true;
     }
