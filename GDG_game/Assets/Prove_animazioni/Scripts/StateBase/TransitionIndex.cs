@@ -23,15 +23,26 @@ namespace roundbeargames_tutorial
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
             CharacterControl control = characterState.GetCharacterControl(animator);
+            // Debug.Log(MakeTransition(control));
             if (MakeTransition(control))
             {
+
+                Debug.Log(index);
                 animator.SetInteger(TransitionParameter.TransitionIndex.ToString(), index);
             }
         }
+        
 
         public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-            
+            CharacterControl control = characterState.GetCharacterControl(animator);
+            // Debug.Log(MakeTransition(control));
+            if (MakeTransition(control))
+            {
+
+
+                animator.SetInteger(TransitionParameter.TransitionIndex.ToString(), index);
+            }
 
         }
 
@@ -89,6 +100,13 @@ namespace roundbeargames_tutorial
                     case TransitionConditionType.GRABBING_LEDGE:
                         {
 
+                           if (!control.grabCharact==true)
+                            {
+                              
+                                return false;
+                            }
+                            
+                           
                            
                         }
                         break;

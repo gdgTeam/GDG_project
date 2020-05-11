@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: LedgeGrab
   m_EditorClassIdentifier: 
   index: 1
-  transitionConditions: 00000000
+  transitionConditions: 05000000
