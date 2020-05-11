@@ -16,6 +16,22 @@ namespace roundbeargames_tutorial
             {
                 VirtualInputManager.Instance.MoveRight = false;
             }
+            if (Input.GetKey(KeyCode.W))
+            {
+                VirtualInputManager.Instance.MoveUp = true;
+            }
+            else
+            {
+                VirtualInputManager.Instance.MoveUp = false;
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                VirtualInputManager.Instance.MoveDown = true;
+            }
+            else
+            {
+                VirtualInputManager.Instance.MoveDown = false;
+            }
 
             if (Input.GetKey(KeyCode.A))
             {

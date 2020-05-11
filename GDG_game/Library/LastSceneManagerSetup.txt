@@ -1,9 +1,9 @@
 sceneSetups:
-- path: Assets/Prove_animazioni/Animazioni.unity
+- path: Assets/ScenaDiProva/Scena/SampleScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
-- path: Assets/ScenaDiProva/Scena/SampleScene.unity
-  isLoaded: 0
+- path: Assets/Prove_animazioni/Animazioni.unity
+  isLoaded: 1
   isActive: 0
   isSubScene: 0

@@ -11,7 +11,9 @@ namespace roundbeargames_tutorial
         ForceTransition,
         Grounded,
         Push,
+        TransitionIndex,
         PickUp
+
     }
 
     public class CharacterControl : MonoBehaviour
@@ -26,10 +28,14 @@ namespace roundbeargames_tutorial
         public GameObject ColliderEdgePrefab;
         public List<GameObject> BottomSpheres = new List<GameObject>();
         public List<GameObject> FrontSpheres = new List<GameObject>();
+        public bool MoveUp;
+        public bool MoveDown;
+        public LedgeChecker ledgeChecker;
+        
 
         public float GravityMultiplier;
         public float PullMultiplier;
-
+        public bool grabCharact;
         private Rigidbody rigid;
 
         public Rigidbody RIGID_BODY
@@ -38,14 +44,28 @@ namespace roundbeargames_tutorial
             {
                 if (rigid == null)
                 {
-                    rigid = this.gameObject.transform.GetComponent<Rigidbody>();
+                    rigid = GetComponent<Rigidbody>();
                 }
                 return rigid;
+            }
+        }
+        private void Update()
+        {
+            if (ledgeChecker.IsGrabbingLedge == true)
+            {
+                grabCharact = true;
+
+            }
+            if (ledgeChecker.IsGrabbingLedge == false)
+            {
+                grabCharact = false;
+               
             }
         }
 
         private void Awake()
         {
+
             BoxCollider box = GetComponent<BoxCollider>();
 
             float bottom = box.bounds.center.y - box.bounds.extents.y;
@@ -72,6 +92,8 @@ namespace roundbeargames_tutorial
 
             float verSec = (bottomFront.transform.position - topFront.transform.position).magnitude / 10f;
             CreateMiddleSpheres(bottomFront, this.transform.up, verSec, 9, FrontSpheres);
+            
+        
         }
         
 
