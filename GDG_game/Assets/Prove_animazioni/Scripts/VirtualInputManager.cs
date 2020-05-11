@@ -14,5 +14,6 @@ namespace roundbeargames_tutorial
         public bool MoveUp;
         public bool MoveDown;
         
+        public bool Picking;
     }
 }

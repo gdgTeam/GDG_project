@@ -9,6 +9,8 @@ namespace roundbeargames_tutorial
     {
 
         public float BlockDistance;
+        public float PickDistance;
+        public GameObject hand;
 
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
@@ -38,6 +40,11 @@ namespace roundbeargames_tutorial
             {
                 animator.SetBool(TransitionParameter.Push.ToString(), true);
             }
+
+            if (control.Picking && CheckFrontPick(control, animator))
+            {
+                animator.SetBool(TransitionParameter.PickUp.ToString(), true);
+            }
         }
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
@@ -54,6 +61,30 @@ namespace roundbeargames_tutorial
                 if (Physics.Raycast(o.transform.position, control.transform.forward, out hit, BlockDistance) && hit.collider.gameObject.tag == "Pushable")
                 {
                     hit.collider.gameObject.transform.SetParent(animator.gameObject.transform);
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        bool CheckFrontPick(CharacterControl control, Animator animator)
+        {
+            foreach (GameObject o in control.FrontSpheres)
+            {
+                Debug.DrawRay(o.transform.position, control.transform.forward * 0.3f, Color.yellow);
+                RaycastHit hit;
+                if (Physics.Raycast(o.transform.position, control.transform.forward, out hit, PickDistance) && hit.collider.gameObject.tag == "Pickable")
+                {
+                    if(hit.collider.gameObject == GameObject.Find("piantina_prova"))
+                    {
+                        control.PickPlant = true;
+                    }
+                    else
+                    {
+                        control.PickPlant = false;
+                    }
+                    //hit.collider.gameObject.transform.SetParent(GameObject.Find("RightHand").transform);
                     return true;
                 }
             }
