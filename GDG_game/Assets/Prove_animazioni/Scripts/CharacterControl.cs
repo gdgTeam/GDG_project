@@ -31,7 +31,7 @@ namespace roundbeargames_tutorial
         public bool MoveUp;
         public bool MoveDown;
         public LedgeChecker ledgeChecker;
-        
+       
 
         public float GravityMultiplier;
         public float PullMultiplier;

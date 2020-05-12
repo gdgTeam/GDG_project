@@ -43,7 +43,7 @@ AnimatorState:
   m_StateMachineBehaviours:
   - {fileID: -7701962514439723100}
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -118,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ListAbilityData:
   - {fileID: 11400000, guid: 4b833a791f14de3468482993fbb04f5c, type: 2}
+  - {fileID: 11400000, guid: ef846d6893517cd44aaf83cd7d563ce9, type: 2}
 --- !u!114 &-7695324897603691393
 MonoBehaviour:
   m_ObjectHideFlags: 1

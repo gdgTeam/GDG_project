@@ -9,12 +9,14 @@ namespace roundbeargames_tutorial
     {
         public bool IsGrabbingLedge;
         Ledge ledge = null;
+        public Ledge grabbedLedge;
         private void OnTriggerEnter(Collider other)
         {
             ledge = other.gameObject.GetComponent<Ledge>();
             if(ledge != null)
             {
                 IsGrabbingLedge = true;
+                grabbedLedge = ledge;
             }
         }
         private void OnTriggerExit(Collider other)
@@ -23,6 +25,7 @@ namespace roundbeargames_tutorial
             if (ledge != null)
             {
                 IsGrabbingLedge = false;
+                grabbedLedge = null;
             }
         }
     }
