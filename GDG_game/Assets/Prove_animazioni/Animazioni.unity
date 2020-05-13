@@ -1396,8 +1396,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615557382}
-  m_LocalRotation: {x: 0.023473784, y: -0.7072731, z: 0.023510847, w: 0.70615935}
-  m_LocalPosition: {x: 16.61, y: 21.04, z: 2.79}
+  m_LocalRotation: {x: 0.03457815, y: -0.7070801, z: 0.034658737, w: 0.70543665}
+  m_LocalPosition: {x: 92.88, y: 5.4600005, z: 5.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 648140970}
@@ -1938,8 +1938,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031721355}
-  m_LocalRotation: {x: 0.023473784, y: -0.7072731, z: 0.023510847, w: 0.70615935}
-  m_LocalPosition: {x: 16.61, y: 21.04, z: 2.79}
+  m_LocalRotation: {x: 0.03457815, y: -0.7070801, z: 0.034658737, w: 0.70543665}
+  m_LocalPosition: {x: 92.88, y: 5.4600005, z: 5.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3326,6 +3326,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ledge
       objectReference: {fileID: 0}
+    - target: {fileID: 5937524654522918005, guid: a4b5ee4bc4e3e644aad917e68e7c71d4,
+        type: 3}
+      propertyPath: offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937524654522918005, guid: a4b5ee4bc4e3e644aad917e68e7c71d4,
+        type: 3}
+      propertyPath: offset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5937524654522918005, guid: a4b5ee4bc4e3e644aad917e68e7c71d4,
+        type: 3}
+      propertyPath: offset.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3061302790372997595, guid: a4b5ee4bc4e3e644aad917e68e7c71d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3405,21 +3420,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937524654522918005, guid: a4b5ee4bc4e3e644aad917e68e7c71d4,
-        type: 3}
-      propertyPath: offset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937524654522918005, guid: a4b5ee4bc4e3e644aad917e68e7c71d4,
-        type: 3}
-      propertyPath: offset.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5937524654522918005, guid: a4b5ee4bc4e3e644aad917e68e7c71d4,
-        type: 3}
-      propertyPath: offset.x
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4b5ee4bc4e3e644aad917e68e7c71d4, type: 3}
@@ -4051,14 +4051,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172668919692894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 18.68, z: 2.54}
+  m_LocalPosition: {x: 81.7, y: 3.1, z: 5.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4341065988396356397}
   - {fileID: 1219168172}
   - {fileID: 1340326633}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5045292778304511145
 GameObject:
