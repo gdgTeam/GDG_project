@@ -1,6 +1,11 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/Scenes/ScenaDiProva/Scena/SampleScene.unity
   isLoaded: 1
+=======
+- path: Assets/ScenaDiProva/Scena/SampleScene.unity
+  isLoaded: 0
+>>>>>>> Stashed changes
   isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/Prove_animazioni/Animazioni.unity

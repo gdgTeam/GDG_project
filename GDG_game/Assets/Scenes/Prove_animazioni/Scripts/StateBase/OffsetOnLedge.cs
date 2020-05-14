@@ -12,7 +12,11 @@ namespace roundbeargames_tutorial
         {
 
             CharacterControl control = characterState.GetCharacterControl(animator);
-            control.GetComponentInParent<Rigidbody>().transform.localPosition = control.ledgeChecker.grabbedLedge.GetComponent<Rigidbody>().transform.position-offsetTestaPiedi;
+            GameObject anim = control.SkinnedMeshAnimator.gameObject;
+            anim.transform.parent = control.ledgeChecker.GrabbedLedge.transform;
+            anim.transform.localPosition = control.ledgeChecker.GrabbedLedge.Offset;
+
+            control.RIGID_BODY.velocity = Vector3.zero;
 
         }
         public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
@@ -23,7 +27,9 @@ namespace roundbeargames_tutorial
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-
+            CharacterControl control = characterState.GetCharacterControl(animator);
+            GameObject anim = control.SkinnedMeshAnimator.gameObject;
+            anim.transform.parent = null;
         }
 
        
