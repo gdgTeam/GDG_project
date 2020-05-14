@@ -12,7 +12,8 @@ namespace roundbeargames_tutorial
         Grounded,
         Push,
         TransitionIndex,
-        PickUp
+        PickUp,
+        Movedown
 
     }
 
@@ -61,16 +62,28 @@ namespace roundbeargames_tutorial
                 grabCharact = false;
                
             }
+            if (MoveDown == true)
+            {
+             
+             SkinnedMeshAnimator.SetBool(TransitionParameter.Movedown.ToString(), true);
+            this.RIGID_BODY.useGravity = true;
+            this.GetComponent<BoxCollider>().enabled = true;
+
+            }
+            else if(MoveDown==false)
+            {
+                SkinnedMeshAnimator.SetBool(TransitionParameter.Movedown.ToString(), false);
+            }
         }
 
         private void Awake()
         {
-            SetRagdollParts();
+            //SetRagdollParts();
             SetCollidersSpheres();   
         
         }
 
-         private void SetRagdollParts()
+       /*  private void SetRagdollParts()
          {
              Collider[] colliders = this.gameObject.GetComponentsInChildren<Collider>();
              foreach (Collider c in colliders)
@@ -82,21 +95,21 @@ namespace roundbeargames_tutorial
                  }
 
              }
-         }
+         }*/
 
 
 
-         private void OnTriggerEnter(Collider col)
+        /* private void OnTriggerEnter(Collider col)
          {
 
-             {
+            /* {
                  return;
-             }
-             if (col.gameObject.tag== "Pericolo")
+             }*/
+             /*if (col.gameObject.tag== "Pericolo")
              {
                  TurnOnRagdoll();
              }
-         }
+        }
          public void TurnOnRagdoll()
          {
              RIGID_BODY.useGravity = false;
@@ -109,7 +122,7 @@ namespace roundbeargames_tutorial
                  c.isTrigger = false;
                  c.attachedRigidbody.velocity = Vector3.zero;
              }
-         }
+         }*/
 
 
         public void CreateMiddleSpheres(GameObject start, Vector3 dir, float sec, int interations, List<GameObject> spheresList)

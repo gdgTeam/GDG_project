@@ -42,6 +42,7 @@ namespace roundbeargames_tutorial
             if (control.MoveRight)
             {
                 control.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                control.SkinnedMeshAnimator.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 if (!CheckFront(control))
                 {
                     control.transform.Translate(Vector3.forward * Speed * SpeedGraph.Evaluate(stateInfo.normalizedTime) * Time.deltaTime);
@@ -51,6 +52,7 @@ namespace roundbeargames_tutorial
             if (control.MoveLeft)
             {
                 control.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+                control.SkinnedMeshAnimator.transform.rotation= Quaternion.Euler(0f, 180f, 0f);
                 if (!CheckFront(control))
                 {
                     control.transform.Translate(Vector3.forward * Speed * SpeedGraph.Evaluate(stateInfo.normalizedTime) * Time.deltaTime);
@@ -65,6 +67,7 @@ namespace roundbeargames_tutorial
 
        bool CheckFront(CharacterControl control)
         {
+           
             foreach (GameObject o in control.FrontSpheres)
             {
                 Self = false;
@@ -72,7 +75,8 @@ namespace roundbeargames_tutorial
                 RaycastHit hit;
                 if (Physics.Raycast(o.transform.position, control.transform.forward, out hit, 1f))
                 {
-                    Debug.Log("HO TROVATO QUALCOSA");
+                    Debug.Log(" ho rilevato");
+
                     if (hit.collider.gameObject.tag == "Pickable")
                     {
                         BlockDistance = 0.2f;
@@ -81,31 +85,34 @@ namespace roundbeargames_tutorial
                     {
                         BlockDistance = 0.5f;
                     }
-                   
 
                 }
                 else
                 {
+                    Debug.Log(" non rileva niente davanti");
                     BlockDistance = 0.5f;
                 }
                 if (Physics.Raycast(o.transform.position, control.transform.forward, out hit, BlockDistance))
                 {
                     
-                    foreach (Collider c in control.RagdollParts)
-                    {
-                        if (c.gameObject == hit.collider.gameObject)
-                        {
-                            Self = true;
-                            break;
-                        }
-                    }
                     if (!Self && !Ledge.IsLedge(hit.collider.gameObject))
                     {
+                        Debug.Log("Blocca la distanza");
                         return true;
                     }
+
+                    // foreach (Collider c in control.RagdollParts)
+                    // {
+                    /*if (c.gameObject == hit.collider.gameObject)
+                    {
+                        Self = true;
+                        break;
+                    }*/
+                }
+                   
                     
 
-                }
+               //}
             }
 
             return false;

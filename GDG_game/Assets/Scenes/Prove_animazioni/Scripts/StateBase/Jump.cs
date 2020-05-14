@@ -34,6 +34,7 @@ namespace roundbeargames_tutorial
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
+            animator.SetBool(TransitionParameter.Jump.ToString(), false);
             box.size = new Vector3(box.size.x, bottom, zeta);
         }
     }

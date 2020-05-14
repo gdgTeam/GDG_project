@@ -29,6 +29,10 @@ namespace roundbeargames_tutorial
 
                 animator.SetInteger(TransitionParameter.TransitionIndex.ToString(), index);
             }
+            else
+            {
+                animator.SetInteger(TransitionParameter.TransitionIndex.ToString(), 0);
+            }
         }
         
 
@@ -116,10 +120,10 @@ namespace roundbeargames_tutorial
                         break;
                     case TransitionConditionType.JUMP:
                         {
-
-                            if (control.Jump)
+                           
+                            if (!control.Jump)
                             {
-                                return true;
+                                return false;
                             }
                         }
                         break;
