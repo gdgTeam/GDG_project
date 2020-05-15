@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace roundbeargames_tutorial
 {
-    public enum TransitionParameter
+    public enum TransitionParameterdfg
     {
         Move,
         Jump,
@@ -16,7 +16,7 @@ namespace roundbeargames_tutorial
 
     }
 
-    public class CharacterControl : MonoBehaviour
+    public class CharacterControlNO : MonoBehaviour
     {
         public Animator animator;
         public bool MoveRight;

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pushable
   - Pickable
+  - Pericolo
   layers:
   - Default
   - TransparentFX

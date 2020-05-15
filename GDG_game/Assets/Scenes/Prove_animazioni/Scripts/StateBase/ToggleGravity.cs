@@ -9,6 +9,7 @@ namespace roundbeargames_tutorial
     {
         public bool OnStart;
         public bool OnEnd;
+        public bool on;
         
 
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
@@ -27,18 +28,18 @@ namespace roundbeargames_tutorial
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-           /* if (OnEnd)
+           if (OnEnd)
             {
                 CharacterControl control = characterState.GetCharacterControl(animator);
                 ToggleGrav(control);
-            }*/
+            }
         
     } 
 
         private void ToggleGrav(CharacterControl control)
         {
             control.RIGID_BODY.velocity = Vector3.zero;
-            control.RIGID_BODY.useGravity = false;
+            control.RIGID_BODY.useGravity = on;
         }
 
 

@@ -27,8 +27,11 @@ namespace roundbeargames_tutorial
             if (MakeTransition(control))
             {
 
-                Debug.Log(index);
                 animator.SetInteger(TransitionParameter.TransitionIndex.ToString(), index);
+            }
+            else
+            {
+                animator.SetInteger(TransitionParameter.TransitionIndex.ToString(), 0);
             }
         }
         
@@ -43,12 +46,17 @@ namespace roundbeargames_tutorial
 
                 animator.SetInteger(TransitionParameter.TransitionIndex.ToString(), index);
             }
+            else
+            {
+                animator.SetInteger(TransitionParameter.TransitionIndex.ToString(), 0);
+            
+              }
 
         }
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-
+            animator.SetInteger(TransitionParameter.TransitionIndex.ToString(), 0);
         }
 
         private bool MakeTransition(CharacterControl control)
@@ -80,7 +88,7 @@ namespace roundbeargames_tutorial
 
                     case TransitionConditionType.RIGHT:
                     {
-                            if (!control.MoveRight)
+                            if (!control.MoveRight&&!control.MoveLeft)
                             {
                                 return false;
                             }
@@ -90,10 +98,10 @@ namespace roundbeargames_tutorial
                     case TransitionConditionType.LEFT:
                     {
 
-                            if (!control.MoveLeft)
+                           /* if (!control.MoveLeft)
                             {
                                 return false;
-                            }
+                            }*/
                         }
                         break;
 
@@ -112,7 +120,7 @@ namespace roundbeargames_tutorial
                         break;
                     case TransitionConditionType.JUMP:
                         {
-
+                           
                             if (!control.Jump)
                             {
                                 return false;
