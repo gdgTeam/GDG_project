@@ -83,7 +83,7 @@ namespace roundbeargames_tutorial
         
         }
 
-       /*  private void SetRagdollParts()
+        private void SetRagdollParts()
          {
              Collider[] colliders = this.gameObject.GetComponentsInChildren<Collider>();
              foreach (Collider c in colliders)
@@ -95,17 +95,17 @@ namespace roundbeargames_tutorial
                  }
 
              }
-         }*/
+         }
 
 
 
-        /* private void OnTriggerEnter(Collider col)
+        private void OnTriggerEnter(Collider col)
          {
 
-            /* {
+             {
                  return;
-             }*/
-             /*if (col.gameObject.tag== "Pericolo")
+             }
+             if (col.gameObject.tag== "Pericolo")
              {
                  TurnOnRagdoll();
              }
@@ -122,7 +122,7 @@ namespace roundbeargames_tutorial
                  c.isTrigger = false;
                  c.attachedRigidbody.velocity = Vector3.zero;
              }
-         }*/
+         }
 
 
         public void CreateMiddleSpheres(GameObject start, Vector3 dir, float sec, int interations, List<GameObject> spheresList)
