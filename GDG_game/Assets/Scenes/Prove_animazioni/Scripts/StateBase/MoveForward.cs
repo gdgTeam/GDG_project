@@ -58,6 +58,20 @@ namespace roundbeargames_tutorial
                     control.transform.Translate(Vector3.forward * Speed * SpeedGraph.Evaluate(stateInfo.normalizedTime) * Time.deltaTime);
                 }
             }
+            if(control.WalkUpStair)
+            {
+                float angle = -45f;
+                Vector3 newVector = Quaternion.AngleAxis(angle, Vector3.forward)*Vector3.forward;
+                newVector.Normalize();
+                animator.SetBool(TransitionParameter.WalkUpStairs.ToString(), true);
+                control.transform.Translate( newVector* 4f * SpeedGraph.Evaluate(stateInfo.normalizedTime) * Time.deltaTime);
+            }
+            else if (!(control.WalkUpStair))
+            {
+                animator.SetBool(TransitionParameter.WalkUpStairs.ToString(), false);
+            }
+                
+           
         }
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
@@ -75,7 +89,6 @@ namespace roundbeargames_tutorial
                 RaycastHit hit;
                 if (Physics.Raycast(o.transform.position, control.transform.forward, out hit, 1f))
                 {
-                    Debug.Log(" ho rilevato");
 
                     if (hit.collider.gameObject.tag == "Pickable")
                     {
@@ -86,20 +99,25 @@ namespace roundbeargames_tutorial
                         BlockDistance = 0.5f;
                     }
 
+                    if (hit.collider.gameObject.tag == "Stairs" )
+                    {
+                        BlockDistance = 0.2f;
+                    }
+                   
                 }
                 else
                 {
-                    Debug.Log(" non rileva niente davanti");
                     BlockDistance = 0.5f;
                 }
                 if (Physics.Raycast(o.transform.position, control.transform.forward, out hit, BlockDistance))
                 {
                     
-                    if (!Self && !Ledge.IsLedge(hit.collider.gameObject))
+                    if (!Self && !Ledge.IsLedge(hit.collider.gameObject)  &&!Stair.IsStair(hit.collider.gameObject))
                     {
-                        Debug.Log("Blocca la distanza");
+                        Debug.Log(hit.collider.gameObject);
                         return true;
                     }
+                   
 
                     // foreach (Collider c in control.RagdollParts)
                     // {

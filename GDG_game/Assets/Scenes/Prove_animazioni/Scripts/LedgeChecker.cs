@@ -25,7 +25,7 @@ namespace roundbeargames_tutorial
             private void OnTriggerExit(Collider other)
             {
                 CheckLedge = other.gameObject.GetComponent<Ledge>();
-                if (CheckLedge != null)
+                if (CheckLedge == null)
                 {
                     IsGrabbingLedge = false;
                     //GrabbedLedge = null;

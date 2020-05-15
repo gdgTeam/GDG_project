@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Pushable
   - Pickable
-  - Pericolo
+  - Stairs
   layers:
   - Default
   - TransparentFX

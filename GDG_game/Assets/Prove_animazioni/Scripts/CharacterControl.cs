@@ -13,7 +13,8 @@ namespace roundbeargames_tutorial
         Push,
         TransitionIndex,
         PickUp,
-        Movedown
+        Movedown,
+        WalkUpStairs,
 
     }
 
@@ -33,13 +34,25 @@ namespace roundbeargames_tutorial
         public bool MoveDown;
         public LedgeChecker ledgeChecker;
         public List<Collider> RagdollParts = new List<Collider>();
-
         public float GravityMultiplier;
         public float PullMultiplier;
         public bool grabCharact;
+        public bool WalkUpStair;
         private Rigidbody rigid;
+        public StairChecker stairChecker;
 
         public Rigidbody RIGID_BODY
+        {
+            get
+            {
+                if (rigid == null)
+                {
+                    rigid = GetComponent<Rigidbody>();
+                }
+                return rigid;
+            }
+        }
+        private void Update()
         {
             get
             {
@@ -74,6 +87,21 @@ namespace roundbeargames_tutorial
             {
                 SkinnedMeshAnimator.SetBool(TransitionParameter.Movedown.ToString(), false);
             }
+            if (stairChecker.StairVal == true)
+            {
+                Debug.Log("true");
+                WalkUpStair = true;
+
+            }
+            if (stairChecker.StairVal == false)
+            {
+                Debug.Log("false");
+
+                WalkUpStair = false;
+
+            }
+
+
         }
 
         private void Awake()
