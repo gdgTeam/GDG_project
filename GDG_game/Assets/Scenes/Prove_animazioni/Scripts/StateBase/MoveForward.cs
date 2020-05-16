@@ -60,6 +60,7 @@ namespace roundbeargames_tutorial
             }
             if(control.WalkUpStair)
             {
+                
                 float angle = -45f;
                 Vector3 newVector = Quaternion.AngleAxis(angle, Vector3.forward)*Vector3.forward;
                 newVector.Normalize();
@@ -99,7 +100,7 @@ namespace roundbeargames_tutorial
                         BlockDistance = 0.5f;
                     }
 
-                    if (hit.collider.gameObject.tag == "Stairs" )
+                    if (hit.collider.gameObject.tag == "Stairs" ||hit.collider.gameObject.tag == "Balcone" )
                     {
                         BlockDistance = 0.2f;
                     }

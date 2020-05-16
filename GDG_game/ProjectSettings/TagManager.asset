@@ -7,9 +7,13 @@ TagManager:
   - Pushable
   - Pickable
   - Stairs
+<<<<<<< Updated upstream
   - Fire
   - Corazza
   - GoAhead
+=======
+  - Balcone
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

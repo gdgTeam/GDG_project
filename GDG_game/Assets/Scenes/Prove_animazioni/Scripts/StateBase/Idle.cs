@@ -14,7 +14,9 @@ namespace roundbeargames_tutorial
 
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
+            CharacterControl control = characterState.GetCharacterControl(animator);
             animator.SetBool(TransitionParameter.Jump.ToString(), false); //per evitare di saltare due volte se premo spazio mentre sono nello stato di landing
+            control.RIGID_BODY.velocity = Vector3.zero;
         }
 
         public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
@@ -28,11 +30,13 @@ namespace roundbeargames_tutorial
 
             if (control.MoveRight)
             {
+                
                 animator.SetBool(TransitionParameter.Move.ToString(), true);
             }
 
             if (control.MoveLeft)
             {
+                
                 animator.SetBool(TransitionParameter.Move.ToString(), true);
             }
 
