@@ -13,7 +13,7 @@ namespace roundbeargames_tutorial
         public bool Pushing;
         public bool MoveUp;
         public bool MoveDown;
-        
+        public bool Shielding;
         public bool Picking;
     }
 }

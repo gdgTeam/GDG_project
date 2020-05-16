@@ -27,6 +27,8 @@ namespace roundbeargames_tutorial
         public bool Pushing;
         public bool Picking;
         public bool PickPlant;
+        public bool Shielding;
+        private bool protectShield;
         public GameObject ColliderEdgePrefab;
         public List<GameObject> BottomSpheres = new List<GameObject>();
         public List<GameObject> FrontSpheres = new List<GameObject>();
@@ -40,6 +42,7 @@ namespace roundbeargames_tutorial
         public bool WalkUpStair;
         private Rigidbody rigid;
         public StairChecker stairChecker;
+        public GameObject Corazza;
 
         public Rigidbody RIGID_BODY
         {
@@ -101,7 +104,18 @@ namespace roundbeargames_tutorial
 
             }
 
-
+            if (Shielding && protectShield)
+            {
+                protectShield = false;
+                MeshRenderer meshCorazza = Corazza.transform.GetComponent<MeshRenderer>();
+                meshCorazza.enabled = true;
+            }
+            if (!Shielding && !protectShield)
+            {
+                protectShield = true;
+                MeshRenderer meshCorazza = Corazza.transform.GetComponent<MeshRenderer>();
+                meshCorazza.enabled = false;
+            }
         }
 
         private void Awake()
@@ -173,9 +187,9 @@ namespace roundbeargames_tutorial
             float front = box.bounds.center.z + box.bounds.extents.z;
             float back = box.bounds.center.z - box.bounds.extents.z;
 
-            GameObject bottomFront = CreateEdgeSphere(new Vector3(0f, bottom, front));
-            GameObject bottomBack = CreateEdgeSphere(new Vector3(0f, bottom, back));
-            GameObject topFront = CreateEdgeSphere(new Vector3(0f, top, front));
+            GameObject bottomFront = CreateEdgeSphere(new Vector3(this.transform.position.x, bottom, front));
+            GameObject bottomBack = CreateEdgeSphere(new Vector3(this.transform.position.x, bottom, back));
+            GameObject topFront = CreateEdgeSphere(new Vector3(this.transform.position.x, top, front));
 
             bottomFront.transform.parent = this.transform;
             bottomBack.transform.parent = this.transform;
