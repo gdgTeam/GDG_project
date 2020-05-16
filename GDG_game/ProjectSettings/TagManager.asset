@@ -7,6 +7,8 @@ TagManager:
   - Pushable
   - Pickable
   - Stairs
+  - Fire
+  - Corazza
   layers:
   - Default
   - TransparentFX

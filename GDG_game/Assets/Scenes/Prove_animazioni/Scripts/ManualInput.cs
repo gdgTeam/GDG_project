@@ -75,6 +75,15 @@ namespace roundbeargames_tutorial
             {
                 characterControl.Picking = false;
             }
+
+            if (VirtualInputManager.Instance.Shielding)
+            {
+                characterControl.Shielding = true;
+            }
+            else
+            {
+                characterControl.Shielding = false;
+            }
         }
     }
 }

@@ -6,6 +6,8 @@ namespace roundbeargames_tutorial
 {
     public class KeyboardInput : MonoBehaviour
     {
+        private bool protectShield = true;
+
         void Update()
         {
             if (Input.GetKey(KeyCode.D))
@@ -68,6 +70,21 @@ namespace roundbeargames_tutorial
             {
                 VirtualInputManager.Instance.Picking = false;
             }
+
+            if (Input.GetMouseButtonDown(2) && protectShield)
+            {
+                protectShield = false;
+                VirtualInputManager.Instance.Shielding = true;
+                StartCoroutine("Shield");
+            }
+        }
+
+        IEnumerator Shield()
+        {
+            yield return new WaitForSeconds(5f);
+            VirtualInputManager.Instance.Shielding = false;
+            yield return new WaitForSeconds(2f);
+            protectShield = true;
         }
     }
 }

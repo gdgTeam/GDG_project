@@ -27,6 +27,8 @@ namespace roundbeargames_tutorial
         public bool Pushing;
         public bool Picking;
         public bool PickPlant;
+        public bool Shielding;
+        private bool protectShield;
         public GameObject ColliderEdgePrefab;
         public List<GameObject> BottomSpheres = new List<GameObject>();
         public List<GameObject> FrontSpheres = new List<GameObject>();
@@ -40,6 +42,7 @@ namespace roundbeargames_tutorial
         public bool WalkUpStair;
         private Rigidbody rigid;
         public StairChecker stairChecker;
+        public GameObject Corazza;
 
         public Rigidbody RIGID_BODY
         {
@@ -101,7 +104,18 @@ namespace roundbeargames_tutorial
 
             }
 
-
+            if (Shielding && protectShield)
+            {
+                protectShield = false;
+                MeshRenderer meshCorazza = Corazza.transform.GetComponent<MeshRenderer>();
+                meshCorazza.enabled = true;
+            }
+            if (!Shielding && !protectShield)
+            {
+                protectShield = true;
+                MeshRenderer meshCorazza = Corazza.transform.GetComponent<MeshRenderer>();
+                meshCorazza.enabled = false;
+            }
         }
 
         private void Awake()
