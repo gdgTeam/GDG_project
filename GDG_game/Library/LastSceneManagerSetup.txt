@@ -1,22 +1,9 @@
 sceneSetups:
-<<<<<<< Updated upstream
 - path: Assets/Scenes/Scena_foresta.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
 - path: Assets/Scenes/Prove_animazioni/Animazioni.unity
   isLoaded: 1
-=======
-- path: Assets/Scenes/ScenaDiProva/Scena/SampleScene.unity
-  isLoaded: 1
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Scenes/Prove_animazioni/Animazioni.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
-- path: Assets/Scenes/Scena_foresta.unity
-  isLoaded: 0
->>>>>>> Stashed changes
   isActive: 0
   isSubScene: 0
