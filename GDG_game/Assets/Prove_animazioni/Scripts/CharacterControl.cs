@@ -52,7 +52,7 @@ namespace roundbeargames_tutorial
                 return rigid;
             }
         }
-        private void Update()
+        public Rigidbody RIGID_BODY1
         {
             get
             {
@@ -79,7 +79,7 @@ namespace roundbeargames_tutorial
             {
              
              SkinnedMeshAnimator.SetBool(TransitionParameter.Movedown.ToString(), true);
-            this.RIGID_BODY.useGravity = true;
+            this.RIGID_BODY1.useGravity = true;
             this.GetComponent<BoxCollider>().enabled = true;
 
             }
@@ -140,8 +140,8 @@ namespace roundbeargames_tutorial
         }
          public void TurnOnRagdoll()
          {
-             RIGID_BODY.useGravity = false;
-             RIGID_BODY.velocity = Vector3.zero;
+             RIGID_BODY1.useGravity = false;
+             RIGID_BODY1.velocity = Vector3.zero;
              this.gameObject.GetComponent<BoxCollider>().enabled = false;
              SkinnedMeshAnimator.enabled = false;
              SkinnedMeshAnimator.avatar = null;
