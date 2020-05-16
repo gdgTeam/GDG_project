@@ -4306,7 +4306,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4e-45}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -11957,7 +11957,7 @@ PrefabInstance:
     - target: {fileID: 2300002, guid: 2e9f9bdd2df17f840824a1f12a144074, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6bb0c34a6daa8784bba71d94ac984a49, type: 2}
+      objectReference: {fileID: 2100000, guid: a3384ef3e2313034f9016ad8a1f3999f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e9f9bdd2df17f840824a1f12a144074, type: 3}
 --- !u!1 &1848491369
@@ -16149,7 +16149,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6922793697723135513, guid: faf8e2409433b5d4582d70daae777bc4, type: 3}
+  - {fileID: 2100000, guid: 077806ad640732a4784f118a430aa308, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
