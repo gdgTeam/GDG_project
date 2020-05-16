@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":76.67057800292969,"y":0.36195072531700137,"z":-284.285888671875},"rotation":{"x":-0.03531428799033165,"y":0.6812801957130432,"z":-0.0329379104077816,"w":-0.7304286956787109},"size":15.51884651184082,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":92.24238586425781,"y":1.5672047138214112,"z":-268.97186279296877},"rotation":{"x":-0.20815055072307588,"y":0.5886051058769226,"z":-0.16024911403656007,"w":-0.7645512223243713},"size":27.794254302978517,"orthographic":true}
+>>>>>>> GroundDetector
