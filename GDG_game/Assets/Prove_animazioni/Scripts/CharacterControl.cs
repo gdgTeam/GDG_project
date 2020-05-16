@@ -187,9 +187,9 @@ namespace roundbeargames_tutorial
             float front = box.bounds.center.z + box.bounds.extents.z;
             float back = box.bounds.center.z - box.bounds.extents.z;
 
-            GameObject bottomFront = CreateEdgeSphere(new Vector3(0f, bottom, front));
-            GameObject bottomBack = CreateEdgeSphere(new Vector3(0f, bottom, back));
-            GameObject topFront = CreateEdgeSphere(new Vector3(0f, top, front));
+            GameObject bottomFront = CreateEdgeSphere(new Vector3(this.transform.position.x, bottom, front));
+            GameObject bottomBack = CreateEdgeSphere(new Vector3(this.transform.position.x, bottom, back));
+            GameObject topFront = CreateEdgeSphere(new Vector3(this.transform.position.x, top, front));
 
             bottomFront.transform.parent = this.transform;
             bottomBack.transform.parent = this.transform;
