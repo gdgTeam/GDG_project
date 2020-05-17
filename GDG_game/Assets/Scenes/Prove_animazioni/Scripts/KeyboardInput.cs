@@ -93,7 +93,7 @@ namespace roundbeargames_tutorial
 
         IEnumerator Shield()
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(6.5f);
             VirtualInputManager.Instance.Shielding = false;
             yield return new WaitForSeconds(2f);
             protectShield = true;

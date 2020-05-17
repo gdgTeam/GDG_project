@@ -10,10 +10,15 @@ namespace roundbeargames_tutorial
 
         public AnimationCurve SpeedGraph;
         public float Speed;
+        public float PushDistance;
+        private bool tree = false;
+        private GameObject pushableTree;
 
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-
+            PushDistance = 0.5f;
+            CharacterControl control = characterState.GetCharacterControl(animator);
+            tree = CheckObjectFront(control, animator);
         }
 
         public override void UpdateAbility(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
@@ -24,6 +29,11 @@ namespace roundbeargames_tutorial
             {
                 animator.SetBool(TransitionParameter.Push.ToString(), true);
                 control.transform.Translate(Vector3.forward * Speed * SpeedGraph.Evaluate(stateInfo.normalizedTime) * Time.deltaTime);
+                if (tree)
+                {
+                    pushableTree.transform.Rotate(new Vector3(0, -40f, 0) * Time.deltaTime, Space.Self);
+                    Debug.Log("suca");
+                }
             }
 
             if (!control.Pushing)
@@ -37,6 +47,23 @@ namespace roundbeargames_tutorial
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
 
+        }
+
+        bool CheckObjectFront(CharacterControl control, Animator animator)
+        {
+            foreach (GameObject o in control.FrontSpheres)
+            {
+                Debug.DrawRay(o.transform.position, control.transform.forward * 0.3f, Color.yellow);
+                RaycastHit hit;
+                if (Physics.Raycast(o.transform.position, control.transform.forward, out hit, PushDistance) && hit.collider.gameObject.tag == "PushableTree")
+                {
+                    pushableTree = hit.collider.gameObject;
+                    Debug.Log(hit.collider.gameObject);
+                    return true;
+                }
+            }
+
+            return false;
         }
 
     }

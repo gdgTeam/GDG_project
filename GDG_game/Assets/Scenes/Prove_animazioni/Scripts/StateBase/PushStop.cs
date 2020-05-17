@@ -26,8 +26,13 @@ namespace roundbeargames_tutorial
 
         public GameObject findChildrenWithTag(Animator animator)
         {
-            foreach (Transform t in animator.gameObject.transform) {
+            foreach (Transform t in animator.gameObject.transform)
+            {
                 if (t.gameObject.tag == "Pushable")
+                {
+                    return t.gameObject;
+                }
+                else if (t.gameObject.tag == "PushableTree")
                 {
                     return t.gameObject;
                 }
