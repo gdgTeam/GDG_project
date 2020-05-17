@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 325b8b4ef499381479541890fdf5903b, type: 3}
   m_Name: Player_PickUp
   m_EditorClassIdentifier: 
-  BlockDistance: 0
+  piantina: {fileID: 0}

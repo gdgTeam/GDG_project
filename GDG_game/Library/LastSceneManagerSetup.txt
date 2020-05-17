@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ScenaDiProva/Scena/SampleScene.unity
+- path: Assets/Scenes/Scena_foresta.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
@@ -7,6 +7,7 @@ sceneSetups:
   isLoaded: 1
   isActive: 0
   isSubScene: 0
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 - path: Assets/Scenes/Scena_foresta.unity
   isLoaded: 1
@@ -14,3 +15,5 @@ sceneSetups:
   isSubScene: 0
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> GroundDetector

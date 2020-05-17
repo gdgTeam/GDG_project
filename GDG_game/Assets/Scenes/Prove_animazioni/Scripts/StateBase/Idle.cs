@@ -10,6 +10,7 @@ namespace roundbeargames_tutorial
 
         public float BlockDistance;
         public float PickDistance;
+        public bool plant = false;
         public GameObject hand;
 
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
@@ -45,9 +46,22 @@ namespace roundbeargames_tutorial
                 animator.SetBool(TransitionParameter.Push.ToString(), true);
             }
 
-            if (control.Picking && CheckFrontPick(control, animator))
+            if (control.Picking && CheckFrontPick(control, animator) && !control.plant)
             {
                 animator.SetBool(TransitionParameter.PickUp.ToString(), true);
+            }
+            else
+            {
+                animator.SetBool(TransitionParameter.PickUp.ToString(), false);
+            }
+
+            if (control.PickingDown && control.plant)
+            {
+                animator.SetBool(TransitionParameter.PickDown.ToString(), true);
+            }
+            else
+            {
+                animator.SetBool(TransitionParameter.PickDown.ToString(), false);
             }
         }
 
