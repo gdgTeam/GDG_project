@@ -15,6 +15,7 @@ namespace roundbeargames_tutorial
         PickUp,
         Movedown,
         WalkUpStairs,
+        PickDown
 
     }
 
@@ -26,7 +27,9 @@ namespace roundbeargames_tutorial
         public bool Jump;
         public bool Pushing;
         public bool Picking;
+        public bool PickingDown;
         public bool PickPlant;
+        public bool plant = false;
         public bool Shielding;
         private bool protectShield;
         public GameObject ColliderEdgePrefab;

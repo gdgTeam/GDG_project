@@ -7,6 +7,7 @@ namespace roundbeargames_tutorial
     public class KeyboardInput : MonoBehaviour
     {
         private bool protectShield = true;
+        private bool protectPlant = false;
 
         void Update()
         {
@@ -62,13 +63,24 @@ namespace roundbeargames_tutorial
                 VirtualInputManager.Instance.Pushing = false;
             }
 
-            if (Input.GetKey(KeyCode.Q))
+            if (Input.GetKey(KeyCode.Q) && !protectPlant)
             {
+                protectPlant = true;
                 VirtualInputManager.Instance.Picking = true;
             }
             else
             {
                 VirtualInputManager.Instance.Picking = false;
+            }
+
+            if(Input.GetKey(KeyCode.Q) && !VirtualInputManager.Instance.Picking && protectPlant)
+            {
+                protectPlant = false;
+                VirtualInputManager.Instance.PickingDown = true;
+            }
+            else
+            {
+                VirtualInputManager.Instance.PickingDown = false;
             }
 
             if (Input.GetMouseButtonDown(2) && protectShield)
