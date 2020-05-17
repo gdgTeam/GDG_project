@@ -9,10 +9,18 @@ namespace roundbeargames_tutorial
     {
         //public GameObject piantinaSpalla;
         public GameObject piantinaMano;
+        private Rigidbody rbPianta;
+        private Rigidbody rbPersonaggio;
+        private CharacterControl control;
 
         public override void OnEnter(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
+            control = characterState.GetCharacterControl(animator);
             piantinaMano = GameObject.Find("piantina_prova");
+            rbPersonaggio = control.transform.GetComponent<Rigidbody>();
+            rbPianta = piantinaMano.transform.GetComponent<Rigidbody>();
+            rbPersonaggio.isKinematic = true;
+            rbPianta.isKinematic = true;
             /*MeshRenderer piantaSpallaMesh;
             piantaSpallaMesh = piantinaSpalla.transform.GetComponent<MeshRenderer>();
             piantaSpallaMesh.enabled = false;*/
@@ -31,9 +39,14 @@ namespace roundbeargames_tutorial
 
         public override void OnExit(CharacterState characterState, Animator animator, AnimatorStateInfo stateInfo)
         {
-            CharacterControl control = characterState.GetCharacterControl(animator);
             piantinaMano.transform.parent = null;
             control.plant = false;
+            MeshCollider piantinaManoCollider;
+            piantinaManoCollider = piantinaMano.transform.GetComponent<MeshCollider>();
+            piantinaManoCollider.enabled = true;
+            piantinaMano.transform.position = new Vector3(control.transform.position.x, piantinaMano.transform.position.y, piantinaMano.transform.position.z);
+            rbPersonaggio.isKinematic = false;
+            rbPianta.isKinematic = false;
             /*MeshRenderer piantaSpallaMesh;
             piantaSpallaMesh = piantinaSpalla.transform.GetComponent<MeshRenderer>();
             piantaSpallaMesh.enabled = true;*/
