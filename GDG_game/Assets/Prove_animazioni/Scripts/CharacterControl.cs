@@ -85,7 +85,7 @@ namespace roundbeargames_tutorial
             {
              
              SkinnedMeshAnimator.SetBool(TransitionParameter.Movedown.ToString(), true);
-            this.RIGID_BODY1.useGravity = true;
+            this.RIGID_BODY.useGravity = true;
             this.GetComponent<BoxCollider>().enabled = true;
 
             }
@@ -95,13 +95,13 @@ namespace roundbeargames_tutorial
             }
             if (stairChecker.StairVal == true)
             {
-                Debug.Log("true");
+               
                 WalkUpStair = true;
 
             }
             if (stairChecker.StairVal == false)
             {
-                Debug.Log("false");
+              
 
                 WalkUpStair = false;
 
@@ -150,15 +150,12 @@ namespace roundbeargames_tutorial
              {
                  return;
              }
-             if (col.gameObject.tag== "Pericolo")
-             {
-                 TurnOnRagdoll();
-             }
+             
         }
          public void TurnOnRagdoll()
          {
-             RIGID_BODY1.useGravity = false;
-             RIGID_BODY1.velocity = Vector3.zero;
+             RIGID_BODY.useGravity = false;
+             RIGID_BODY.velocity = Vector3.zero;
              this.gameObject.GetComponent<BoxCollider>().enabled = false;
              SkinnedMeshAnimator.enabled = false;
              SkinnedMeshAnimator.avatar = null;

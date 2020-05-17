@@ -19,7 +19,7 @@ namespace roundbeargames_tutorial
             {
                 characterControl.MoveUp = true;
             }
-            else
+            else if (!VirtualInputManager.Instance.MoveUp)
             {
                 characterControl.MoveUp = false;
             }

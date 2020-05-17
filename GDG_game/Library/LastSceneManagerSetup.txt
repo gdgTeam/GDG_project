@@ -7,3 +7,13 @@ sceneSetups:
   isLoaded: 1
   isActive: 0
   isSubScene: 0
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+- path: Assets/Scenes/Scena_foresta.unity
+  isLoaded: 1
+  isActive: 0
+  isSubScene: 0
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> GroundDetector
