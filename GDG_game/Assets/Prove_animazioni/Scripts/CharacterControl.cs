@@ -15,7 +15,8 @@ namespace roundbeargames_tutorial
         PickUp,
         Movedown,
         WalkUpStairs,
-        PickDown
+        PickDown,
+        BalanceWalk
 
     }
 
@@ -46,6 +47,7 @@ namespace roundbeargames_tutorial
         private Rigidbody rigid;
         public StairChecker stairChecker;
         public GameObject Corazza;
+        public bool gru;
 
         public Rigidbody RIGID_BODY
         {
@@ -118,6 +120,14 @@ namespace roundbeargames_tutorial
                 protectShield = true;
                 MeshRenderer meshCorazza = Corazza.transform.GetComponent<MeshRenderer>();
                 meshCorazza.enabled = false;
+            }
+            if(gru == true)
+            {
+                SkinnedMeshAnimator.SetBool(TransitionParameter.BalanceWalk.ToString(), true);
+            }
+            if (gru == false)
+            {
+                SkinnedMeshAnimator.SetBool(TransitionParameter.BalanceWalk.ToString(), false);
             }
         }
 

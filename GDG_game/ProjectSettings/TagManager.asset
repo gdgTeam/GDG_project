@@ -10,7 +10,11 @@ TagManager:
   - Fire
   - Corazza
   - GoAhead
+<<<<<<< Updated upstream
   - PushableTree
+=======
+  - trigger
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
