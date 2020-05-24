@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fire
+  - trigger
+  - Pushable
+  - Stairs
+  - Pickable
   layers:
   - Default
   - TransparentFX
@@ -14,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Grappable
   - 
   - 
   - 

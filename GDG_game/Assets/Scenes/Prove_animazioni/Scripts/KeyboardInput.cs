@@ -89,6 +89,19 @@ namespace roundbeargames_tutorial
                 VirtualInputManager.Instance.Shielding = true;
                 StartCoroutine("Shield");
             }
+            if (Input.GetMouseButtonDown(0) )
+            {
+              
+                VirtualInputManager.Instance.Spiderman = true;
+                
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+
+                VirtualInputManager.Instance.Spiderman = false;
+
+            }
+
         }
 
         IEnumerator Shield()

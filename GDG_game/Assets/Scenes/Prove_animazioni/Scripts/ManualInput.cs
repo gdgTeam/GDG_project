@@ -93,6 +93,15 @@ namespace roundbeargames_tutorial
             {
                 characterControl.PickingDown = false;
             }
+            if (VirtualInputManager.Instance.Spiderman)
+            {
+                characterControl.Spiderman = true;
+            }
+            else
+            {
+               characterControl.Spiderman = false;
+
+            }
         }
     }
 }

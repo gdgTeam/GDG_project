@@ -16,7 +16,8 @@ namespace roundbeargames_tutorial
         Movedown,
         WalkUpStairs,
         PickDown,
-        BalanceWalk
+        BalanceWalk,
+        Spiderman
 
     }
 
@@ -49,6 +50,7 @@ namespace roundbeargames_tutorial
         public StairChecker stairChecker;
         public GameObject Corazza;
         public bool gru;
+        public bool Spiderman;
 
         public Rigidbody RIGID_BODY
         {
@@ -124,6 +126,14 @@ namespace roundbeargames_tutorial
             if (gru == false)
             {
                 SkinnedMeshAnimator.SetBool(TransitionParameter.BalanceWalk.ToString(), false);
+            }
+            if (Spiderman == true)
+            {
+                SkinnedMeshAnimator.SetBool(TransitionParameter.Spiderman.ToString(), true);
+            }
+            if (Spiderman == false)
+            {
+                SkinnedMeshAnimator.SetBool(TransitionParameter.Spiderman.ToString(), false);
             }
         }
 
