@@ -28,9 +28,9 @@ namespace roundbeargames_tutorial
             control.RIGID_BODY.velocity = Vector3.zero;
             GameObject anim = control.SkinnedMeshAnimator.gameObject;
             anim.transform.parent = null;
-           // control.gameObject.transform.localScale = Vector3.one;
+            control.gameObject.transform.localScale = control.scale;
         }
 
-       
+
     }
 }

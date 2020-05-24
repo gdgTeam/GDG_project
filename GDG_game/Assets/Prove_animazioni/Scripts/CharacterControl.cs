@@ -22,6 +22,7 @@ namespace roundbeargames_tutorial
 
     public class CharacterControl : MonoBehaviour
     {
+        public Vector3 scale= new Vector3();
         public Animator SkinnedMeshAnimator;
         public bool MoveRight;
         public bool MoveLeft;
@@ -60,17 +61,12 @@ namespace roundbeargames_tutorial
                 return rigid;
             }
         }
-        public Rigidbody RIGID_BODY1
+        private void Start()
         {
-            get
-            {
-                if (rigid == null)
-                {
-                    rigid = GetComponent<Rigidbody>();
-                }
-                return rigid;
-            }
+            scale = this.transform.localScale;
+
         }
+
         private void Update()
         {
             if (ledgeChecker.IsGrabbingLedge == true)
@@ -87,7 +83,7 @@ namespace roundbeargames_tutorial
             {
              
              SkinnedMeshAnimator.SetBool(TransitionParameter.Movedown.ToString(), true);
-            this.RIGID_BODY1.useGravity = true;
+            this.RIGID_BODY.useGravity = true;
             this.GetComponent<BoxCollider>().enabled = true;
 
             }
@@ -167,8 +163,8 @@ namespace roundbeargames_tutorial
         }
          public void TurnOnRagdoll()
          {
-             RIGID_BODY1.useGravity = false;
-             RIGID_BODY1.velocity = Vector3.zero;
+             RIGID_BODY.useGravity = false;
+             RIGID_BODY.velocity = Vector3.zero;
              this.gameObject.GetComponent<BoxCollider>().enabled = false;
              SkinnedMeshAnimator.enabled = false;
              SkinnedMeshAnimator.avatar = null;

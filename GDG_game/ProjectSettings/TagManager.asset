@@ -4,17 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Pushable
-  - Pickable
-  - Stairs
   - Fire
-  - Corazza
-  - GoAhead
-<<<<<<< Updated upstream
-  - PushableTree
-=======
-  - trigger
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

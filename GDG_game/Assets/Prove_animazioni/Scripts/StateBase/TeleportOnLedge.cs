@@ -32,7 +32,7 @@ namespace roundbeargames_tutorial
             CharacterControl control = characterState.GetCharacterControl(animator);
             control.ledgeChecker.RemoveLedge();
             control.SkinnedMeshAnimator.transform.parent = control.transform;
-            //control.gameObject.transform.localScale = Vector3.one;
+            control.gameObject.transform.localScale = control.scale;
         }
 
 
