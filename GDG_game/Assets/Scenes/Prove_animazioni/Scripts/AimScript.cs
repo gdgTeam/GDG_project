@@ -31,7 +31,7 @@ public class AimScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rg.MoveRotation(Quaternion.Euler(new Vector3(0, 90 * Mathf.Sign(targetTransform.position.x - transform.position.x), 0)));
+        rg.MoveRotation(Quaternion.Euler(new Vector3(0, 90 - (90 * Mathf.Sign(targetTransform.position.z - transform.position.z)), 0)));
     }
 
 
