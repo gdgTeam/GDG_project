@@ -17,7 +17,8 @@ namespace roundbeargames_tutorial
         WalkUpStairs,
         PickDown,
         BalanceWalk,
-        Spiderman
+        Spiderman,
+        Die
 
     }
 
@@ -163,12 +164,16 @@ namespace roundbeargames_tutorial
         private void OnTriggerEnter(Collider col)
          {
 
-             {
+             /*{
                  return;
-             }
+             }*/
              if (col.gameObject.tag== "Pericolo")
              {
                  TurnOnRagdoll();
+             }
+             if(col.gameObject.tag == "Fire")
+             {
+                CheckCorazza();
              }
         }
          public void TurnOnRagdoll()
@@ -185,6 +190,13 @@ namespace roundbeargames_tutorial
              }
          }
 
+        public void CheckCorazza()
+        {
+            if (protectShield)
+            {
+                SkinnedMeshAnimator.SetBool(TransitionParameter.Die.ToString(), true);
+            }
+        }
 
         public void CreateMiddleSpheres(GameObject start, Vector3 dir, float sec, int interations, List<GameObject> spheresList)
         {
