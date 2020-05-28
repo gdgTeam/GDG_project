@@ -102,6 +102,23 @@ namespace roundbeargames_tutorial
                characterControl.Spiderman = false;
 
             }
+            if (VirtualInputManager.Instance.LookRight)
+            {
+                characterControl.LookRight = true;
+            }
+            else
+            {
+                characterControl.LookRight = false;
+            }
+
+            if (VirtualInputManager.Instance.LookLeft)
+            {
+                characterControl.LookLeft = true;
+            }
+            else
+            {
+                characterControl.LookLeft = false;
+            }
         }
     }
 }

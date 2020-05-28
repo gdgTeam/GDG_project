@@ -9,6 +9,10 @@ TagManager:
   - Pushable
   - Stairs
   - Pickable
+  - Ground
+  - Enemy
+  - GoAhead
+  - PushableTree
   layers:
   - Default
   - TransparentFX
@@ -19,7 +23,7 @@ TagManager:
   - 
   - 
   - Grappable
-  - 
+  - MouseTarget
   - 
   - 
   - 

@@ -14,10 +14,12 @@ namespace roundbeargames_tutorial
             if (Input.GetKey(KeyCode.D))
             {
                 VirtualInputManager.Instance.MoveRight = true;
+                VirtualInputManager.Instance.Move = true;
             }
             else
             {
                 VirtualInputManager.Instance.MoveRight = false;
+                VirtualInputManager.Instance.Move = false;
             }
             if (Input.GetKey(KeyCode.W))
             {
@@ -39,10 +41,13 @@ namespace roundbeargames_tutorial
             if (Input.GetKey(KeyCode.A))
             {
                 VirtualInputManager.Instance.MoveLeft = true;
+                VirtualInputManager.Instance.Move = true;
             }
             else
             {
                 VirtualInputManager.Instance.MoveLeft = false;
+                VirtualInputManager.Instance.Move = false;
+
             }
 
             if (Input.GetKey(KeyCode.Space))
