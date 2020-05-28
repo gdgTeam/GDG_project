@@ -18,5 +18,8 @@ namespace roundbeargames_tutorial
         public bool Picking;
         public bool PickingDown;
         public bool Spiderman;
+
+        public bool LookRight;
+        public bool LookLeft;
     }
 }

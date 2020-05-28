@@ -1779,6 +1779,8 @@ MonoBehaviour:
   Picking: 0
   PickingDown: 0
   PickPlant: 0
+  LookRight: 0
+  LookLeft: 0
   plant: 0
   Shielding: 0
   ColliderEdgePrefab: {fileID: 8741312830442226265, guid: 32ce171f92354824b9ec0a2b62696301,
@@ -3923,6 +3925,8 @@ MonoBehaviour:
   Picking: 0
   PickingDown: 0
   PickPlant: 0
+  LookRight: 0
+  LookLeft: 0
   plant: 0
   Shielding: 0
   ColliderEdgePrefab: {fileID: 8741312830442226265, guid: 32ce171f92354824b9ec0a2b62696301,
@@ -5241,6 +5245,8 @@ MonoBehaviour:
   Picking: 0
   PickingDown: 0
   PickPlant: 0
+  LookRight: 0
+  LookLeft: 0
   plant: 0
   Shielding: 0
   ColliderEdgePrefab: {fileID: 8741312830442226265, guid: 32ce171f92354824b9ec0a2b62696301,

@@ -17,7 +17,8 @@ namespace roundbeargames_tutorial
         WalkUpStairs,
         PickDown,
         BalanceWalk,
-        Spiderman
+        Spiderman,
+        MoveBackward
 
     }
 
@@ -32,6 +33,8 @@ namespace roundbeargames_tutorial
         public bool Picking;
         public bool PickingDown;
         public bool PickPlant;
+        public bool LookRight;
+        public bool LookLeft;
         public bool plant = false;
         public bool Shielding;
         private bool protectShield;

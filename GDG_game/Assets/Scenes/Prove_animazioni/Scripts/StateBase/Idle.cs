@@ -27,14 +27,25 @@ namespace roundbeargames_tutorial
                 animator.SetBool(TransitionParameter.Jump.ToString(), true);
             }
 
-            if (control.MoveRight)
+            if (control.MoveRight && control.LookRight)
+            {
+                animator.SetBool(TransitionParameter.Move.ToString(), true);
+                //devo controllare dove sta guardando il personaggio
+            }
+
+            if (control.MoveLeft && control.LookLeft)
             {
                 animator.SetBool(TransitionParameter.Move.ToString(), true);
             }
 
-            if (control.MoveLeft)
+            if(control.MoveLeft && control.LookRight)
             {
-                animator.SetBool(TransitionParameter.Move.ToString(), true);
+                animator.SetBool(TransitionParameter.MoveBackward.ToString(), true);
+            }
+
+            if (control.MoveRight && control.LookLeft)
+            {
+                animator.SetBool(TransitionParameter.MoveBackward.ToString(), true);
             }
 
             if (control.Pushing && CheckFrontPush(control, animator))
